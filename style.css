@@ -1,0 +1,253 @@
+/* --- Global Resets & Behaviors --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth transitions when anchor links are clicked */
+}
+
+body{
+    background: #061826;
+    color: white;
+    line-height: 1.6;
+}
+
+/* --- Hero Section & Custom Buttons --- */
+header{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('9ab6d0fc256ffe95f60de2885b3f5fb1.jpg'); /* Matches the turtle's code name */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero h1{
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero-desc {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: #e0f2fe;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn{
+    display: inline-block;
+    padding: 14px 28px;
+    background: #00b4d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0077b6;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #00b4d8;
+}
+
+.btn-secondary:hover {
+    background: #00b4d8;
+}
+
+/* --- General Layout Utilities --- */
+section{
+    padding: 80px 10%;
+    border-bottom: 1px solid #0f2d42;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #90e0ef;
+}
+
+.form-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #caf0f8;
+}
+
+/* --- Services Summary Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #0f2d42;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #00b4d8;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #00b4d8;
+    font-size: 1.4rem;
+}
+
+/* --- Email Explainer Split Section --- */
+.explainer-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.explainer-image, .explainer-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.explainer-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.explainer-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.explainer-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #e0f2fe;
+}
+
+/* --- Featured Artwork Gallery (9 Items) --- */
+.gallery-instruction {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a8dadc;
+    font-style: italic;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.art-piece {
+    background: #0f2d42;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.art-piece:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.25);
+}
+
+.art-piece img{
+    width: 100%;
+    height: 340px; /* Adjusted height to show off your vertical canvas textures elegantly */
+    object-fit: cover;
+    display: block;
+}
+
+.art-piece h3{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #0f2d42;
+}
+
+/* --- About Section --- */
+.about{
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.about p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: #e0f2fe;
+}
+
+/* --- Forms Structure --- */
+form{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea{
+    padding: 14px;
+    border: 1px solid #1e4e70;
+    border-radius: 5px;
+    background: #0f2d42;
+    color: white;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #00b4d8;
+    background: #143b57;
+}
+
+button{
+    padding: 14px;
+    background: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover{
+    background: #0077b6;
+}
+
+/* --- Footer --- */
+footer{
+    background: #031018;
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
